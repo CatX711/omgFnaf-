@@ -2,9 +2,12 @@ import random
 from random import randint
 from time import sleep
 youalreadysearched = 0
+youalreadysearchedDesk = 0
 CheckedForAnimatronic = 0 # this will go up every time you check for an animatronic. once you get to a certain amount,
 # the hour will end and move onto the next one.
 flashlightBattery = 8
+
+
 print("yo dude, you're, like, in fredrick fastbear's pizzaria...")
 sleep(4)
 print("bro, hello...?")
@@ -119,3 +122,44 @@ while True:
                 print("Uh oh. Do i hear an ani-")
                 sleep(1)
                 print("Oh its the game over screen already.")
+    elif answer2 == "rightd":
+        print("The door is locked.")
+        sleep(2)
+    if CheckedForAnimatronic == 4:
+        print("you made it! it's 1 AM!")
+        sleep(2)
+        print("now you can rest.")
+        sleep(2)
+        print("suddenly you hear a chiming noise coming from the desk in the center of the room.")
+        sleep(4)
+        print("upon opening the desk drawer, you find a battery pack containing 5 batteries. ")
+        sleep(5)
+        print("nice.")
+        flashlightBattery += 5
+        print(f"Flashes remaining: {flashlightBattery}")
+        carryOn = input("Press enter to continue to 2 AM ")
+while True:        
+    whatnext = input("""
+    
+
+    Location: Office
+    Current Effects: Head Ache
+    Objective: Survive until 2 AM
+    
+    You can search the rest of the desk drawers,
+    or move on into the next room.
+    ("move")/("searchD")
+    
+    > """)
+    if whatnext == "searchD":
+        if youalreadysearchedDesk == 0:
+            print("You search the desk and find a chipped pencil, some more paper, and... a single battery!")
+            flashlightBattery += 1
+            youalreadysearchedDesk += 1
+            sleep(6)
+        elif youalreadysearchedDesk == 1:
+            print("You already searched the desk!")
+            sleep(3)
+
+
+
