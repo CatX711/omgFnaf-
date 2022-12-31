@@ -5,7 +5,7 @@ youalreadysearched = 0
 youalreadysearchedDesk = 0
 CheckedForAnimatronic = 0 # this will go up every time you check for an animatronic. once you get to a certain amount,
 # the hour will end and move onto the next one.
-flashlightBattery = 8
+flashlightBattery = 10
 
 
 print("yo dude, you're, like, in fredrick fastbear's pizzaria...")
